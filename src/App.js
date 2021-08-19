@@ -2,19 +2,26 @@
 import './App.css';
 import Login from './Components/Login';
 
-
-import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
+import { Admin } from './Components/Admin'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import React from 'react'
-
 
 function App() {
 
   return (
+    <>
     <Router>
-      <Login token="asdfefcrg"/>
-      
+      <Switch>
+        <Route exact path="/">
+          <Login />
+        </Route>
+        <Route exact path="/Admin">
+          <Admin />
+          </Route>
+      </Switch >
     </Router>
-  );
+    </>
+      );
 }
 
-export default App;
+      export default App;

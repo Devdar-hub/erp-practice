@@ -12,6 +12,7 @@ const Login = (props) => {
         console.log(email);
         var password = document.getElementById("password").value;
         console.log(password);
+        
         fetch('https://projects.parthvi.tech/api/v1/auth/login/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -25,7 +26,8 @@ const Login = (props) => {
                 if (data.status_code === 200) {
                     console.log("login")
                     document.getElementById("status").innerHTML = data.data.email;
-                    console.log(props.token);
+                    localStorage.setItem('token',data.data.token);
+                    window.location="http://localhost:3000/admin";
                 }
                 else {
                     console.log("error")
@@ -33,7 +35,7 @@ const Login = (props) => {
                 }
             });
     
-    
+            
     
     }
     
@@ -47,6 +49,7 @@ const Login = (props) => {
                 <button> Login</button>
             </form>
             <div><h1 id="status"></h1></div>
+            
            
         </div>
 
