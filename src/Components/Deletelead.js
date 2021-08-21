@@ -5,9 +5,9 @@ Modal.setAppElement('#root');
 
 const Deletelead = () => {
     var gettoken = localStorage.getItem('token');
-    var id = 4;
+    var id = 2;
     function deleteLead(){
-        fetch("https://projects.parthvi.tech/api/v1/lead/"+id+"/",{
+        fetch("https://projects.parthvi.tech/api/v1/contact/2",{
             method : "DELETE",
             headers : ({'Content-Type' : 'application/json',
                         'Authorization':'Token '+gettoken})

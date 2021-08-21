@@ -39,7 +39,7 @@ const Contact = () => {
                 createlead(e);
             }
         else{
-            alert("Error from server");
+            alert(data.email[0]);
         }})
     }
 
@@ -80,7 +80,7 @@ const Contact = () => {
                 alert("Lead created succefully");
             }
         else{
-            alert("Error from server");
+            alert(data.email[0]);
         }})
     }
 

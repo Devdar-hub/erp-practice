@@ -38,7 +38,7 @@ const Lead = () => {
                 alert("Lead added Succefully");
             }
         else{
-            alert("Error from server");
+            alert(data.email[0]);
         }})
     }
     return (

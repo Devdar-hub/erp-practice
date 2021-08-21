@@ -1,8 +1,10 @@
 import React from 'react'
 
 const Convert = () => {
-    var id = 1;
+    
     var gettoken = localStorage.getItem("token");
+    var id = localStorage.getItem("Convertid");
+    
     function getData() {
 
 
@@ -13,12 +15,12 @@ const Convert = () => {
             .then(data => {
                 console.log(data);
                 console.log();
-                document.getElementById("lstage").value = data.data[0].lstage;
+                document.getElementById("lstage").option = data.data[0].lstage;
                 document.getElementById("fname").value = data.data[0].fname;
                 document.getElementById("lname").value = data.data[0].lname;
-                document.getElementById("phoneno").value = data.data[0].phoneno;
+                document.getElementById("phoneno").value = data.data[0].phone;
                 document.getElementById("email").value = data.data[0].email;
-                document.getElementById("lsource").value = data.data[0].lsource;
+                document.getElementById("lsource").option = data.data[0].lsource;
                 document.getElementById("company").value = data.data[0].company;
                 document.getElementById("country").value = data.data[0].country;
                 document.getElementById("status").value = data.data[0].status;
