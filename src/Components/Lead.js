@@ -68,8 +68,8 @@ const Lead = () => {
                 Company : <input type="text" name="" id="company" required/><br /><br />
                 Country : <input type="text" name="" id="country" required/><br /><br />
                 Status : <select name="status" id="status">
-                    <option value="1" defaultValue>o</option>
-                    <option value="0">1</option>
+                    <option value="0" defaultValue>0</option>
+                    <option value="1">1</option>
                 </select><br /><br />
                 {/* Deleted At : <input type="date" id="deletedat" /><br /><br /> */}
                 <button>Create</button>
