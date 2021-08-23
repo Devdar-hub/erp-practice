@@ -27,7 +27,7 @@ const Login = (props) => {
                     console.log("login")
                     document.getElementById("status").innerHTML = data.data.email;
                     localStorage.setItem('token',data.data.token);
-                    window.location="http://localhost:3000/admin";
+                    window.location="/admin";
                 }
                 else {
                     console.log("error")
